@@ -65,11 +65,11 @@ A service for managing book borrowings, returns, and reservations in a library m
 ## Running Tests
 
 Install dependencies:
-```bash
+    ```bash
     pip install -r requirements.txt
 
 Run tests:
-```bash
+    ```bash
     pytest tests/ -v
 
 ## Environment Variables
@@ -139,11 +139,11 @@ The service includes comprehensive error handling for:
 
 For local development:
 1. Start MongoDB and Redis:
-```bash
+    ```bash
     docker compose up mongodb redis
 
 2. Start the FastAPI application:
-```bash
+    ```bash
     uvicorn app.main:app --reload --port 8002
 
 ## Monitoring
