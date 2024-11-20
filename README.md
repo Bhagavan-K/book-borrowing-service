@@ -29,6 +29,9 @@ A service for managing book borrowings, returns, and reservations in a library m
    ```bash
     git clone https://github.com/Bhagavan-K/book-borrowing-service.git
     cd book-borrowing-service
+2. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
 
 3. Create .env file:
    ```env
@@ -41,7 +44,7 @@ A service for managing book borrowings, returns, and reservations in a library m
    ```bash
     docker-compose up --build
 
-6. Access the API documentation:
+5. Access the API documentation:
    ```bash
     http://localhost:8002/docs
 
@@ -64,14 +67,7 @@ A service for managing book borrowings, returns, and reservations in a library m
 - GET /api/borrowings/book/{book_id}/history - View book's borrowing history
 
 ## Running Tests
-
-Install dependencies:
-    ```bash
-    pip install -r requirements.txt
-
-Run tests:
-    ```bash
-    pytest tests/ -v
+      pytest tests/ -v
 
 ## Environment Variables
 
