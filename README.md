@@ -26,10 +26,11 @@ A service for managing book borrowings, returns, and reservations in a library m
 ## Setup
 
 1. Clone the repository:
+   ```bash
     git clone https://github.com/Bhagavan-K/book-borrowing-service.git
     cd book-borrowing-service
 
-2. Create .env file:
+3. Create .env file:
    ```env
     MONGODB_URL=mongodb://mongodb:27018
     DATABASE_NAME=book_borrowing
