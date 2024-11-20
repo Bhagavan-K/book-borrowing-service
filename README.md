@@ -30,15 +30,18 @@ A service for managing book borrowings, returns, and reservations in a library m
     cd book-borrowing-service
 
 2. Create .env file:
+   ```env
     MONGODB_URL=mongodb://mongodb:27018
     DATABASE_NAME=book_borrowing
     REDIS_URL=redis://redis:6380
     JWT_SECRET_KEY=yourprivatekey
 
-3. Build and run with Docker:
+4. Build and run with Docker:
+   ```bash
     docker-compose up --build
 
-4. Access the API documentation:
+6. Access the API documentation:
+   ```bash
     http://localhost:8002/docs
 
 ## API Endpoints
@@ -62,9 +65,11 @@ A service for managing book borrowings, returns, and reservations in a library m
 ## Running Tests
 
 Install dependencies:
+```bash
     pip install -r requirements.txt
 
 Run tests:
+```bash
     pytest tests/ -v
 
 ## Environment Variables
@@ -75,24 +80,6 @@ Run tests:
 | DATABASE_NAME | Database name | book_borrowing |
 | REDIS_URL | Redis connection URL | redis://redis:6380 |
 | JWT_SECRET_KEY | JWT secret key | yourprivatekey |
-
-## Project Structure
-
-book-borrowing-service/
-├── app/
-│   ├── api/
-│   │   ├── routes/
-│   │   ├── dependencies/
-│   │   └── core/
-│   ├── core/
-│   ├── models/
-│   ├── services/
-│   ├── schemas/
-│   └── main.py
-├── tests/
-├── docker-compose.yml
-├── .env
-└── Dockerfile
 
 ## Integration
 
@@ -152,9 +139,11 @@ The service includes comprehensive error handling for:
 
 For local development:
 1. Start MongoDB and Redis:
-    docker-compose up mongodb redis
+```bash
+    docker compose up mongodb redis
 
 2. Start the FastAPI application:
+```bash
     uvicorn app.main:app --reload --port 8002
 
 ## Monitoring
